@@ -279,7 +279,7 @@ def main():
 
         with col_img:
             st.markdown("**Gambar Asli**")
-            st.image(image_to_process, use_column_width=True)
+            st.image(image_to_process, use_container_width=True)
 
         with st.spinner("Memproses gambar..."):
             tensor, face_crop, status = preprocess_image(
@@ -294,7 +294,7 @@ def main():
         else:
             with col_crop:
                 st.markdown("**Crop Wajah**")
-                st.image(face_crop, use_column_width=True)
+                st.image(face_crop, use_container_width=True)
                 if status == "no_face_fallback":
                     st.caption("Menggunakan seluruh gambar (fallback).")
 
